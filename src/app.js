@@ -22,11 +22,11 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let days = ["Thu", "Fri", "Sat", "Sun"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -46,6 +46,7 @@ function displayForecast() {
       </div>
   `;
   });
+
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
